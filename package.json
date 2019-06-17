@@ -1,0 +1,39 @@
+{
+    "name": "mre",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc -w",
+        "prepare": "yarn run build"
+    },
+    "dependencies": {
+        "lodash": "^4.17.11",
+        "yargs": "^13.2.4"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.134",
+        "@types/node": "^12.0.8",
+        "@types/yargs": "^13.0.0",
+        "@typescript-eslint/eslint-plugin": "^1.10.2",
+        "@typescript-eslint/parser": "^1.10.2",
+        "babel-eslint": "^10.0.1",
+        "eslint": "5.16.0",
+        "eslint-config-alloy": "2.0.3",
+        "eslint-config-prettier": "4.3.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-react": "7.13.0",
+        "prettier": "1.17.1",
+        "typescript": "^3.5.2"
+    },
+    "private": true,
+    "license": "MIT",
+    "bin": {
+        "mre": "./bin/mre.js"
+    },
+    "description": "mri-cli_v2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/amily4555/mre/tree/master/packages/umi"
+    },
+    "author": "mizi"
+}

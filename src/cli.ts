@@ -1,15 +1,20 @@
 import * as yargs from 'yargs';
-import { setArgs } from './config-cli/config';
+import { setArgs } from './config/config';
 
 export const cli = () => {
-    return yargs
-        .command('init', '初始化系统', setArgs, (argv) => {
-            console.debug('--- init', argv);
-        })
-        .command('dev', '启动系统', setArgs, (argv) => {
-            console.debug('--- dev', argv);
-        })
-        .demandCommand()
-        .help()
-        .epilog('mre - mri-cli_v2').argv;
+    return (
+        yargs
+            .commandDir('commanders')
+            // .command('*', '错误命令提示', {}, (argv) => {
+            //     console.debug(argv);
+            //     console.error(`mre ${argv._.join(' ')} 不存在或错误`);
+            // })
+            .demandCommand()
+            .showHelpOnFail(true)
+            .recommendCommands()
+            .strict()
+            // .help()
+            .epilog('mre - mri-cli_v2')
+            .parse()
+    );
 };

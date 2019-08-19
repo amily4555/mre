@@ -14,3 +14,8 @@ zsh: permission denied: mre
 chmod +x ./bin/mre.js
 
 ```
+
+
+
+
+

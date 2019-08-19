@@ -1,9 +1,5 @@
 module.exports = {
-    extends: [
-        'eslint-config-alloy/typescript',
-        'prettier',
-        'prettier/@typescript-eslint',
-    ],
+    extends: ['eslint-config-alloy/typescript', 'prettier', 'prettier/@typescript-eslint'],
     plugins: ['prettier'],
     globals: {
         // 这里填入你的项目需要的全局变量

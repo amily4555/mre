@@ -9,4 +9,3 @@ export const builder = function(yargs: any) {
 export const handler = function(argv: any) {
     console.debug('::::: git');
 };
-

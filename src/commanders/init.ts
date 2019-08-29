@@ -4,6 +4,7 @@ import * as inquirer from 'inquirer';
 import { createMritemp } from '../handlers/mritemp';
 import initGit from '../handlers/init-git';
 import { Argv } from 'yargs';
+import systemCheck from '../handlers/system-check';
 
 const command = 'init';
 const describe = '提交git commit信息';
@@ -22,6 +23,7 @@ const handler = async function(args: Argv) {
 
     /**
      * mri init 适用于文件夹生成 mri project
+     * - 系统检测(node, npm, yarn 版本检测)
      * - 确认当前目录为根目录
      * - git init
      * - 生成 mrirc 分支
@@ -32,6 +34,9 @@ const handler = async function(args: Argv) {
      * - 生成 mri 文件结构
      * - 安装相关包
      */
+
+    // - 系统检测
+    systemCheck();
 
     // - 确认当前目录为根目录
     let questions = [];
